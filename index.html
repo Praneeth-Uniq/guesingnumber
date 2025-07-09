@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 Guess The Number!</h1>
+      <div class="mode-toggle">
+        <label>🌞/🌙</label>
+        <input type="checkbox" id="themeToggle" />
+      </div>
+    </header>
+
+    <section class="game-setup">
+      <input type="number" id="min" placeholder="Min" />
+      <input type="number" id="max" placeholder="Max" />
+      <button id="startBtn">Start Game</button>
+    </section>
+
+    <section class="game-area hidden">
+      <p>Guess a number between <span id="rangeDisplay"></span></p>
+      <input type="number" id="guessInput" />
+      <button id="guessBtn">Guess</button>
+      <p id="hint"></p>
+      <p id="attempts">Attempts: 0</p>
+      <button id="resetBtn">Reset</button>
+    </section>
+
+    <section class="history hidden">
+      <h2>📜 Guess History</h2>
+      <ul id="guessHistory"></ul>
+    </section>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="correctSound" src="sounds/correct.mp3"></audio>
+  <audio id="wrongSound" src="sounds/wrong.mp3"></audio>
+  <audio id="winSound" src="sounds/win.mp3"></audio>
+  <audio id="gameOverSound" src="sounds/gameover.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
